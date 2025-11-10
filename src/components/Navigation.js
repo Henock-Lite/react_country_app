@@ -14,10 +14,15 @@ const Navigation = () => {
         >
           <li>à propos</li>
         </NavLink>
+          <NavLink
+          to="/blog"
+          className={(nav) => (nav.isActive ? "nav-active" : "")}
+        >
+          <li>blog</li>
+        </NavLink>
       </ul>
     </div>
   );
 };
 
 export default Navigation;
-// https://restcountries.com/v3.1/all?fields=name,flags,population,capital,continents

@@ -207,4 +207,99 @@ li {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
+}
+
+.article {
+  margin: 10px 50px;
+  background: white;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 15px;
+}
+.article .card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 5px 0 10px;
+}
+.article .card-header em {
+  font-size: 0.8rem;
+}
+.article p {
+  font-size: 0.9rem;
+}
+.article textarea {
+  width: 100%;
+  resize: none;
+  height: 70px;
+  outline: none;
+}
+.article .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0 5px;
+}
+.article .btn-container button {
+  width: 70px;
+  height: 20px;
+  font-size: 0.7rem;
+  margin: 0 2px;
+  cursor: pointer;
+}
+.article .btn-container button:hover {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+}
+
+.blog-container h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.blog-container form {
+  display: grid;
+  min-width: 400px;
+  text-align: center;
+  width: 50%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.blog-container form input,
+.blog-container form textarea {
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #61dafb;
+  resize: none;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+.blog-container form textarea {
+  height: 80px;
+}
+.blog-container form p {
+  font-size: 0.8rem;
+  color: red;
+}
+.blog-container form input[type=submit] {
+  width: 200px;
+  margin-left: auto;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background: #61dafb;
+}
+.blog-container form input[type=submit]:hover {
+  background: #282c34;
+  color: white;
 }/*# sourceMappingURL=index.css.map */
