@@ -10,26 +10,30 @@ const Blog = () => {
   const [content, setContent] = useState("");
   const [error, setError] = useState(false);
 
-  const getData = () => {
-    axios
+  const getData = async () => {
+    await axios
       .get("http://localhost:3004/articles")
       .then((res) => setBlogdata(res.data));
   };
   useEffect(() => getData, []);
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (content.length < 140) {
       setError(true);
     } else {
-      axios.post("http://localhost:3004/articles", {
-        author,
-        content,
-        date: Date.now(),
-      });
-      setError(false);
-      setAuthor("");
-      setContent("");
-      getData();
+      try {
+        await axios.post("http://localhost:3004/articles", {
+          author,
+          content,
+          date: Date.now(),
+        });
+        setError(false);
+        setAuthor("");
+        setContent("");
+        getData();
+      } catch (err) {
+        console.error(err);
+      }
     }
   };
   return (
